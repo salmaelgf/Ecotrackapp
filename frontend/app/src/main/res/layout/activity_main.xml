@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Zone principale avec contenu + chatbot -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Conteneur principal avec Toolbar et contenu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Toolbar -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#4CAF50"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:title="EcoTrack"
+                android:titleTextColor="#FFFFFF"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            <!-- Contenu -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F5FDF6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:gravity="center_horizontal">
+
+                    <!-- Logo -->
+                    <ImageView
+                        android:id="@+id/logo_image"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/ecotrack_logo1"
+                        android:contentDescription="Logo EcoTrack"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="24dp" />
+
+                    <!-- Titre -->
+                    <TextView
+                        android:id="@+id/header_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EcoTrack Scanner"
+                        android:textColor="#2E7D32"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Scan -->
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/scan_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📷 Scan Barcode"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/rounded_button"
+                        android:layout_marginBottom="20dp"
+                        android:padding="14dp" />
+
+                    <!-- Card infos -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/product_info_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="8dp"
+                        android:backgroundTint="#FFFFFF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:id="@+id/product_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Les informations du produit s'afficheront ici"
+                                android:textSize="16sp"
+                                android:textColor="#2E7D32"
+                                android:gravity="center"
+                                android:textAlignment="center"
+                                android:lineSpacingExtra="4dp" />
+
+                            <TextView
+                                android:id="@+id/alternatives_info"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#2E7D32"
+                                android:textSize="16sp"
+                                android:paddingTop="12dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Bouton EcoChat -->
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/ask_ecotrack_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:text="Ask EcoTrack for more info"
+                        android:background="@drawable/rounded_button"
+                        android:layout_marginTop="12dp"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <!-- Floating chatbot button (fab) -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/chatbot_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="20dp"
+            app:srcCompat="@drawable/chatbot"
+            app:tint="@null"
+            android:contentDescription="Chatbot"
+            app:backgroundTint="#4CAF50"
+            app:maxImageSize="48dp"/>
+    </FrameLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/nav_header"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        app:itemBackground="@drawable/nav_item_background"
+        app:itemTextAppearance="@style/NavigationViewStyle"
+        app:itemIconTint="@color/nav_item_icon"
+        app:itemTextColor="@color/nav_item_text"
+        app:menu="@menu/drawer_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
