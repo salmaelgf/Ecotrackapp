@@ -44,9 +44,7 @@ Access services:
 - 💬 **EcoChat**: Smart chatbot assistant (AI + REST API).
 - 🧠 **Carbon Prediction**: ML-powered inference for unknown values.
 - 🔁 **Smart Alternatives**: Suggests eco-friendly product replacements.
-- 🌍 **Multilingual**: English & French.
-- 🔒 **Authentication**: JWT-based login, OAuth2 support.
-- 📶 **Offline Mode**: Cache access for low-connectivity users.
+
 
 ## Technical Stack 🛠
 - Android SDK, Retrofit, ZXing, TensorFlow Lite
@@ -88,8 +86,8 @@ mvn spring-boot:run
 - Khaoula Aguabdre
 
 ## Contact 📧
-- salmaelgf@gmail.com
-- khaoula.aguabdre@gmail.com
+- salmaelgouffi@gmail.com
+
 
 ## License 📄
 This project is licensed under the MIT License.
