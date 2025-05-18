@@ -14,7 +14,7 @@ EcoTrack is a mobile and web application that empowers consumers to make sustain
 - [Contact](#contact)
 - [License](#license)
 
-## Architecture 🏗️
+## Architecture 🏗
 EcoTrack is composed of:
 - **Android Mobile App (Java)**: Barcode scanning, AI predictions, offline access.
 - **Spring Boot Backend**: User auth, database, REST APIs.
@@ -22,7 +22,7 @@ EcoTrack is composed of:
 - **PostgreSQL DB**: Persistent product and user data.
 - **Dockerized Services**: Easy deployment and scalability.
 
-## Docker Deployment 🐳
+## Docker Deployment 
 
 ### Backend (`docker-compose.yml`):
 Includes PostgreSQL, phpPgAdmin, and Spring Boot service.
@@ -39,7 +39,7 @@ Access services:
 - API: http://localhost:8082
 - DB: localhost:5432
 
-## Features 🌟
+## Features 
 - 🌿 **Barcode Scanning**: Retrieve product carbon data instantly.
 - 💬 **EcoChat**: Smart chatbot assistant (AI + REST API).
 - 🧠 **Carbon Prediction**: ML-powered inference for unknown values.
@@ -62,7 +62,7 @@ Access services:
 └── resources
 ```
 
-## Getting Started 🚀
+## Getting Started 
 ### Prerequisites:
 - Java 22, Node.js, PostgreSQL, Android Studio
 
@@ -78,7 +78,7 @@ mvn spring-boot:run
   - Set base URL for API in `Constants.java`
   - Build and run
 
-## Screenshots 🖼️
+## Screenshots 🖼
 > Include images in `/screenshots` folder
 
 ## Contributors 👥
@@ -89,5 +89,4 @@ mvn spring-boot:run
 - salmaelgouffi@gmail.com
 
 
-## License 📄
-This project is licensed under the MIT License.
+
