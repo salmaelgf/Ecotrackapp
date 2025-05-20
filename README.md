@@ -21,6 +21,7 @@ EcoTrack is composed of:
 - **Flask Microservice**: AI model predictions.
 - **PostgreSQL DB**: Persistent product and user data.
 - **Dockerized Services**: Easy deployment and scalability.
+![archi (2)](https://github.com/user-attachments/assets/0af14598-1ed6-4163-862c-d5642c08a15d)
 
 ## Docker Deployment 
 
@@ -84,6 +85,7 @@ mvn spring-boot:run
 ## Contributors 👥
 - Salma El Gouffi
 - Khaoula Aguabdre
+- Najat El Ouahi
 
 ## Contact 📧
 - salmaelgouffi@gmail.com
