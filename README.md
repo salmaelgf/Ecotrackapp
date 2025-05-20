@@ -3,7 +3,7 @@
 EcoTrack is a mobile and web application that empowers consumers to make sustainable food choices by providing real-time carbon footprint data, intelligent alternatives, and chatbot-powered assistance. Built using modern frameworks like Spring Boot, Android SDK, and Flask AI microservices, EcoTrack is an open-source solution designed for research, education, and practical climate action.
 
 ## Table of Contents
-- [Architecture](#architecture)
+- [Architecture](#architecture) 
 - [Docker Deployment](#docker-deployment)
 - [Features](#features)
 - [Technical Stack](#technical-stack)
@@ -21,6 +21,8 @@ EcoTrack is composed of:
 - **Flask Microservice**: AI model predictions.
 - **PostgreSQL DB**: Persistent product and user data.
 - **Dockerized Services**: Easy deployment and scalability.
+  ![archi (2)](https://github.com/user-attachments/assets/f91df229-716d-4433-8e4a-b1371941c129)
+
 
 ## Docker Deployment 
 
@@ -84,6 +86,7 @@ mvn spring-boot:run
 ## Contributors 👥
 - Salma El Gouffi
 - Khaoula Aguabdre
+- Najat El Ouahi
 
 ## Contact 📧
 - salmaelgouffi@gmail.com
